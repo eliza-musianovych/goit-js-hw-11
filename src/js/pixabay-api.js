@@ -18,5 +18,5 @@ const parametrs = new URLSearchParams({
 
 return axios.get(`${URL}?${parametrs}`)
 .then(response => response.data)
-.catch(error => error)
+.catch(error => iziToast.error({message: `Sorry, there are no images matching your search query. Please try again!`}))
 }

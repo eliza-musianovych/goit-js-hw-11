@@ -6,7 +6,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
     captions: true,
     captionSelector: 'img',
     captionType: 'attr',
-    captionsData: 'alt',
+    captionsData: `alt`,
     captionDelay: 250,
 });
 
@@ -20,7 +20,7 @@ const markup = response.hits
     <img
     class="gallery-image"
     src="${largeImageURL}"
-    alt="${tags}"
+    alt= "${tags.split(`, `).slice(0, 3).join(`, `)}"
     width="360px"
     height="200px"
     />
